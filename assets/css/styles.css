@@ -1,0 +1,374 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+  color: #fff;
+  background-color: #000;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Landing Page */
+.landing {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3); /* Slight overlay for better text visibility */
+}
+
+.nav-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 1;
+  position: relative;
+}
+
+.nav-btn {
+  padding: 0.8rem 2rem;
+  border: 2px solid white;
+  border-radius: 6px;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+  min-width: 200px;
+}
+
+.nav-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Subpages */
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem;
+  min-height: 100vh;
+}
+
+header {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.home-btn {
+  padding: 0.5rem 1rem;
+  border: 1px solid white;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.home-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.content {
+  line-height: 1.8;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1.5rem;
+}
+
+/* Gallery Styles */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.02);
+}
+
+.gallery-caption {
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-caption h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.gallery-caption a {
+    display: inline-block;
+    margin-top: 0.5rem;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+    font-size: 0.9rem;
+}
+
+.gallery-caption a:hover {
+    color: white;
+}
+
+/* Blog List Styles */
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.blog-preview {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 2rem;
+}
+
+.blog-preview:last-child {
+    border-bottom: none;
+}
+
+.blog-preview h2 {
+    margin-bottom: 0.5rem;
+}
+
+.blog-preview h2 a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.blog-preview h2 a:hover {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.article-meta {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.article-meta time {
+    margin-right: 1rem;
+}
+
+.read-more {
+    display: inline-block;
+    margin-top: 1rem;
+    color: white;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.read-more:hover {
+    text-decoration: underline;
+}
+
+/* Article Page Styles */
+.article {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.article h2 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.emphasis {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 3px solid #fff;
+    margin: 1.5rem 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.article-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.share-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.share-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.share-btn:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.article-link {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+.article-link a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+}
+
+.article-link a:hover {
+    color: white;
+}
+
+/* Blog Page */
+article {
+  margin-bottom: 3rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+article:last-child {
+  border-bottom: none;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+article p:first-of-type {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* Publications and Contact */
+.publications, .contact {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.publications h2, .contact h2 {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+}
+
+.publications ul, .contact ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.publications li, .contact li {
+    margin: 0.5rem 0;
+}
+
+.publications a, .contact a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.publications a:hover, .contact a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+/* Contact Section */
+.contact-section {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-links {
+    margin-top: 1rem;
+}
+
+.contact-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.separator {
+    margin: 0 1rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Paper Links */
+.paper-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    padding: 0.2rem 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+    font-family: monospace;
+    transition: all 0.3s ease;
+}
+
+.paper-link:hover {
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+} 
