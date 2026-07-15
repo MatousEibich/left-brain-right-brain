@@ -23,7 +23,7 @@ a {
   width: 100%;
   position: relative;
   background-size: cover;
-  background-position: center 65%;
+  background-position: 35% 65%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -448,7 +448,7 @@ article p:first-of-type {
 @media (max-width: 600px) {
     .landing {
         padding-top: 5vh;
-        background-position: center 55%;
+        background-position: 40% 55%;
     }
 
     .landing-name {
