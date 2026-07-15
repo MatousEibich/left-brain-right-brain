@@ -23,12 +23,12 @@ a {
   width: 100%;
   position: relative;
   background-size: cover;
-  background-position: center 30%;
+  background-position: center bottom;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding-top: 20vh;
+  padding-top: 15vh;
 }
 
 .landing::before {
@@ -447,8 +447,8 @@ article p:first-of-type {
 /* Responsive */
 @media (max-width: 600px) {
     .landing {
-        padding-top: 12vh;
-        background-position: center 40%;
+        padding-top: 10vh;
+        background-position: center bottom;
     }
 
     .landing-name {
